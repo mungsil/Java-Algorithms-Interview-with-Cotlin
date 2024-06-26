@@ -23,7 +23,7 @@ public class AddTwoNumbers {
 
         Node answer = solution(list1.getFirstNode(), list2.getFirstNode());
         while (answer != null) {
-            System.out.print(answer.data + " ");
+            System.out.print(answer.value + " ");
             answer = answer.next;
         }
     }
@@ -45,12 +45,12 @@ public class AddTwoNumbers {
             int sum = 0;
 
             if (listNode1 != null){
-                sum = sum + listNode1.data;
+                sum = sum + listNode1.value;
                 listNode1 = listNode1.next;
             }
 
             if (listNode2 != null){
-                sum = sum + listNode2.data;
+                sum = sum + listNode2.value;
                 listNode2 = listNode2.next;
 
             }
@@ -71,37 +71,5 @@ public class AddTwoNumbers {
             list.add(Integer.parseInt(value));
         }
     }
-    
-    static class Node {
-        int data;
-        Node next;
-        Node(int data) {
-            this.data = data;
-        }
 
-        Node(int data, Node next) {
-            this.data = data;
-            this.next = next; }
-    }
-    
-    static class SinglyLinkedList{
-
-        private Node head;
-
-        public void add(int data) {
-            Node newNode = new Node(data);
-            if (head == null) {
-                head = newNode;
-            } else {
-                Node current = head;
-                while (current.next != null) {
-                    current = current.next;
-                }
-                current.next = newNode;
-            }
-        }
-        public Node getFirstNode() {
-            return head;
-        }
-    }
 }

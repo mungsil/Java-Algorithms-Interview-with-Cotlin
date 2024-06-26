@@ -48,42 +48,8 @@ public class ReverseLinkedList {
 
     private static void printAnswer(Node reverseHead) {
         while (reverseHead != null) {
-            System.out.print(reverseHead.data +" ");
+            System.out.print(reverseHead.value +" ");
             reverseHead = reverseHead.next;
         }
-    }
-    static class Node{
-        int data;
-        Node next;
-
-        Node(int data) {
-            this.data = data;
-        }
-        Node(int data, Node next) {
-            this.data = data;
-            this.next = next; }
-    }
-
-    static class SinglyLinkedList{
-        private Node head;
-
-        // 노드 추가
-        public void add(int data) {
-            Node newNode = new Node(data);
-            if (head == null) {
-                head = newNode;
-            } else {
-                Node current = head;
-                while (current.next != null) {
-                    current = current.next;
-                }
-                current.next = newNode;
-            }
-        }
-
-        public Node getFirstNode() {
-            return head;
-        }
-
     }
 }
