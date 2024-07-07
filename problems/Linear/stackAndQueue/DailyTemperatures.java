@@ -2,6 +2,7 @@ package Linear.stackAndQueue;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;
+import java.util.Deque;
 import java.util.Scanner;
 
 /**
@@ -22,7 +23,7 @@ public class DailyTemperatures {
 
     public static int[] solution(int[] temperatures) {
         int[] result = new int[temperatures.length];
-        ArrayDeque<Integer> stack = new ArrayDeque<>();
+        Deque<Integer> stack = new ArrayDeque<>();
         for (int i = 0; i < temperatures.length; i++) {
             while (!stack.isEmpty() && temperatures[i] > temperatures[stack.peek()]) {
                 int last = stack.pop();
